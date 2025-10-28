@@ -6,13 +6,14 @@ app = Flask(__name__)
 
 
 @app.route('/hello')		# Route	
-
 def say_hello():		# Function
 
     return "Hello, visitor!"
 
 
-
+@app.route('/test/<message>')
+def test(message):
+    return render_template('test.html', message=message)
 
 
 @app.route('/inventory')
@@ -22,7 +23,6 @@ def inventory():
 
 
 @app.route('/hello/<name>')
-
 def hello(name):
 
     return f'Hello, {name}!'
@@ -30,7 +30,6 @@ def hello(name):
 
 
 @app.route('/calc/<int:num1>/<string:operation>/<int:num2>')
-
 def calculator(num1, operation, num2):
 
     add = num1 + num2
