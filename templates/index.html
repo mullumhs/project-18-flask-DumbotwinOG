@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>User Inventory</title>
+    <style>
+         body {
+            text-align: center;
+            font-family: Arial, sans-serif;
+        }
+    </style>
+
+</head>
+<body>
+    <h1>Your Inventory:</h1>
+    <ul>
+        {% for item in items %}
+        <li>{{ item }}</li>
+        {% endfor %}
+    </ul>
+</body>
+</html>
